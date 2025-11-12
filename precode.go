@@ -39,7 +39,6 @@ func Worker(in <-chan int64, out chan<- int64) {
 		out <- num
 		time.Sleep(1 * time.Millisecond)
 	}
-	return
 }
 
 func main() {
@@ -85,7 +84,6 @@ func main() {
 				chOut <- num
 				amounts[i]++
 			}
-			return
 		}(outs[i], int64(i))
 	}
 
